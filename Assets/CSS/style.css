@@ -1,8 +1,25 @@
 
+#gameTitle{
+    color:white;
+    text-align: center;
+    font-size:50px;
+    padding-top:50px;
+    font-family: font-family: 'Ruslan Display', cursive;;
+
+}
+
+body{
+    background-image: url("https://www.qantas.com/content/travelinsider/en/explore/north-america/mexico/longest-underwater-cave-in-the-world-discovered-in-mexico/_jcr_content/parsysTop/hero.img.full.medium.jpg");
+    background-size: 2000px 1000px;
+    background-repeat: no-repeat;
+    font-family: 'Ruslan Display', cursive;
+}
+
 .crystals{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    padding-top:120px;
     
 }
 
@@ -10,4 +27,46 @@
     border: 1px solid green;
     height:200px;
     width:200px;
+    border-radius: 4px;
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0, 0.5);
+    transition:1s;
+}
+
+.crystal:hover{
+    box-shadow: 9px 9px 9px white;
+    cursor: pointer;
+}
+
+#result{
+    padding-top: 100px;
+    color:white;
+    text-align: center;
+    font-size:30px;
+
+}
+
+#previous{
+    text-align: center;
+    padding-top: 15px;
+    color:white;
+    font-size:30px;
+}
+
+#win{
+    text-align: center;
+    padding-top:10px;
+    color:white;
+    font-size:30px;
+}
+
+#lost{
+    text-align: center;
+    padding-top:10px;
+    color:white;
+    font-size:30px;
+
+}
+
+img{
+    width:50px;
 }
