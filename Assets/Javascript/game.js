@@ -11,14 +11,21 @@
 
 // array to hold random value to choose for random number
 
-var randomResult;
+var random_result;
 var win;
 var loss;
 
 $(document).ready(function() {
+
+random_result = Math.floor(Math.random() *  120) + 19;
+
+console.log(random_result);
+
+$("#result").html('Random Result: ');
     
 for(var i = 0; i < 4; i++){
 
+    
     var random = Math.floor(Math.random() * 12);
     console.log(random);
     var crystal = $("<div>");
