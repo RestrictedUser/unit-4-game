@@ -1,13 +1,3 @@
-//crystal game involving 4 crystals and a random number
-//new random number after each game for the crystals and starter number
-//counter for crystals to show what they add up to if they dont go over the total score
-//every crystal needs a random number 1-12
-//random number shown at the start of the game should be between 19-120
-//clicking any crystal should add with previous crystal
-//until if equals the total score
-//if it is equal, then we increment a win counter
-//
-
 
 // array to hold random value to choose for random number
 
@@ -16,13 +6,13 @@ var win = 0;
 var lost = 0;
 var previous = 0;
  
-
+//prepares page to load 
 $(document).ready(function() {
 
 
 
-//result isnt using min
-var resetAndStart = function function_name(arguement){
+//function to assign images/crystals values in a new div
+var resetAndStart = function function_name(){
     
     $(".crystals").empty();
 
@@ -35,13 +25,13 @@ var resetAndStart = function function_name(arguement){
     random_result = Math.floor(Math.random() * 102 ) + 19;
 
     $("#result").html('Random Result: ' + random_result);
-        
+     //loops through the 4 crystals giving a value to each one   
     for(var i = 0; i < 4; i++){
 
-        
+        // assigns the value from 1-12
         var random = Math.floor(Math.random() * 11) + 1;
 
-    
+        // once the value of crystals is set the var crystal creates a div with class of 'crystal' and places the data from the var random inside 
         var crystal = $("<div>");
             crystal.attr({
                 "class": 'crystal',
@@ -51,49 +41,60 @@ var resetAndStart = function function_name(arguement){
                 "background-image": "url('" + images[i] + "')",
                 "background-size":"cover"
             });
-
+            //shows the value of the crystals inside the boxes(only seen when highlighted so that user doesnt have access to values)
             crystal.html(random);
         
             $(".crystals").append(crystal); 
             
 
-    }
+    }//sets id of previous to have current value of crystals clicked (also shows that when the game starts it shows current value at 0 when game loads initially)
     $("#previous").html("Current Total: " + previous);
 }
-
+//calls function so that the forloop is ran
 resetAndStart();
 
 //document listens to the dom instead of button then button is declared in argument
+//controls any clicks within window or on class crystal
 $(document).on('click', ".crystal", function() {
     
-    //turns the var number into a number value from a string
+    //turns the var num into a num value from a string
     var num = parseInt($(this).attr('data-random'));
 
+    // previous is equal to the value of num converted string to value
     previous += num;
 
+    // displays the value of previous 
     $("#previous").html("Current Total: " + previous);
-
+    
+    //allows the developer to see what values the crystals have to make sure code exectutes correctly
     console.log(previous);
 
+    // if previous is greater then the random_result chosen by computer then add 1 to loss counter
     if(previous > random_result){
        
         lost++;
        
        $("#lost").html("You lost: " + lost);
-
+       
+       // sets current total back to 0
        previous = 0;
 
+       //exectures the code again from the begining
        resetAndStart();
        
     }
+    // if previous is equal to the random_result then add +1 to win counter
     else if(previous === random_result){
         
+        // increments so the value of the wins shows after the game is complete
         win++;
 
         $("#win").html("You won: " + win);
+        
+        //reset current total value to 0 
+        previous = 0;
 
-        previous= 0;
-
+        // restarts game from begining
         resetAndStart();
     }
    

@@ -4,13 +4,13 @@
     text-align: center;
     font-size:50px;
     padding-top:50px;
-    font-family: font-family: 'Ruslan Display', cursive;;
+    font-family: font-family: 'Ruslan Display', cursive;
 
 }
 
 body{
     background-image: url("https://www.qantas.com/content/travelinsider/en/explore/north-america/mexico/longest-underwater-cave-in-the-world-discovered-in-mexico/_jcr_content/parsysTop/hero.img.full.medium.jpg");
-    background-size: 2000px 1000px;
+    background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Ruslan Display', cursive;
 }
