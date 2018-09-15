@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 
 //result isnt using min
-var resetAndStart = function function_name(arguement){
+var resetAndStart = function function_name(){
     
     $(".crystals").empty();
 
