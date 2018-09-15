@@ -11,11 +11,7 @@ $(document).ready(function() {
 
 
 
-<<<<<<< HEAD
-//result isnt using min
-=======
 //function to assign images/crystals values in a new div
->>>>>>> 644f460d4aff0777e761194b978a662df5b4ae86
 var resetAndStart = function function_name(){
     
     $(".crystals").empty();
