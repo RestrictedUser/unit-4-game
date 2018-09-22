@@ -19,7 +19,7 @@ var resetAndStart = function function_name(){
     var images = [
     'https://i.pinimg.com/originals/6e/91/46/6e9146efb8487faff07a36dc41f68bfa.gif',
     'https://68.media.tumblr.com/44cb3e3115039f4167440687f92aca45/tumblr_ofgsdj5fvk1vsjcxvo1_540.gif',
-    'https://hbimg.b0.upaiyun.com/2eb639dcd451a97d1d5ff5273a3f4774af8914ba2f4f7f-fqMXhJ',
+    'http://gifimage.net/wp-content/uploads/2017/10/crystal-gif-7.gif',
     'https://i.giphy.com/Z06UFnGuY0H9C.gif'];
 
     random_result = Math.floor(Math.random() * 102 ) + 19;
