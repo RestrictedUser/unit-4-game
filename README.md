@@ -9,3 +9,5 @@ Directions:
 Details: Win or loose counter shows up after your first win or loose.
 
 Developer secret: if you highlight the crystals img you can view their value!
+
+Created by: Tyler Middleton  
